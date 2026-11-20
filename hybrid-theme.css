@@ -65,3 +65,10 @@ body{font-family:'Space Grotesk',Arial,sans-serif;letter-spacing:.005em}
 .top .logo span{color:#ffd447}
 .top .logo small{font-size:9px;letter-spacing:.16em;transform:rotate(2deg);text-shadow:none;color:#45ebdd;margin-top:7px}
 @media(max-width:780px){.brand-hero h1::before{position:static;display:block;margin:0 0 14px;font-size:10px}.brand-hero h1{filter:drop-shadow(3px 4px 0 #090613)}.top .logo{font-size:31px}}
+
+/* Official A1 Productions identity */
+.top .official-logo{display:inline-flex;flex-direction:row;align-items:center;gap:12px;transform:none;text-decoration:none}
+.top .official-logo img{width:clamp(54px,6vw,78px);height:clamp(54px,6vw,78px);object-fit:contain;border-radius:50%;background:#fff;padding:4px;border:2px solid #ffd447;box-shadow:4px 4px 0 #f42b7a,0 0 18px #24e9d64a;flex-shrink:0}
+.top .official-logo .logo-wordmark{display:flex;flex-direction:column;font-family:'Anton',Impact,sans-serif;font-size:clamp(26px,3vw,39px);color:#fff9e9;line-height:1;text-shadow:2px 2px #e83285,4px 4px #14101e}
+.top .official-logo .logo-wordmark small{font:700 9px/1.5 'Space Grotesk',sans-serif;letter-spacing:.12em;color:#45ebdd;margin-top:5px;transform:none;text-shadow:none}
+@media(max-width:560px){.top .official-logo{gap:7px}.top .official-logo img{width:48px;height:48px}.top .official-logo .logo-wordmark{font-size:24px}.top .official-logo .logo-wordmark small{font-size:7px;letter-spacing:.04em}}
