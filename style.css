@@ -9,3 +9,33 @@
 .book-feature{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}.book-cover-type{min-height:265px;border:1px solid #a68b60;background:linear-gradient(145deg,#312b24,#111820);padding:25px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:12px 14px 0 #080b10}.book-cover-type span,.book-cover-type small{letter-spacing:3px;font-size:11px;color:var(--gold)}.book-cover-type strong{font-size:clamp(25px,3vw,43px);line-height:1.1}
 .secondary-sections{border-top:1px solid var(--line)}.two-cards{grid-template-columns:repeat(2,1fr)}.two-cards .card{min-height:300px}.closing{border-top:1px solid var(--line);padding-bottom:110px}.closing p{max-width:730px}
 @media(max-width:780px){.brand-hero{min-height:560px}.spotlight-grid,.book-feature,.two-cards{grid-template-columns:1fr}.spotlight-panel,.book-feature{padding:25px}.book-cover-type{min-height:210px}.top nav a{font-size:12px}}
+
+
+/* BruA1 Empire — retro hip-hop visual refresh */
+:root{--bg:#0c0b14;--panel:#171325;--panel2:#221b31;--text:#fff9e9;--muted:#c6bed0;--gold:#ffcb42;--line:#5a405f}
+body{background-color:#0c0b14;background-image:radial-gradient(circle at 16% 12%,rgba(255,52,132,.13),transparent 26%),radial-gradient(circle at 84% 40%,rgba(38,213,205,.10),transparent 29%),repeating-linear-gradient(0deg,transparent 0 5px,rgba(255,255,255,.012) 6px 7px)}
+.top{background:rgba(13,10,23,.94);border-bottom:3px solid #ffcb42;box-shadow:0 7px 0 rgba(255,65,129,.16);backdrop-filter:blur(12px)}
+.logo{font-size:29px;font-weight:1000;transform:rotate(-2deg);text-shadow:3px 3px 0 #d62c72}.logo span{color:#ffcb42}.top nav a{font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.brand-hero{position:relative;isolation:isolate;overflow:hidden;min-height:720px;background:radial-gradient(ellipse at 80% 22%,rgba(255,191,47,.18),transparent 36%),radial-gradient(ellipse at 12% 75%,rgba(244,44,124,.24),transparent 40%),linear-gradient(125deg,#141024,#070812)}
+.brand-hero:before{content:"BRU A1";position:absolute;z-index:-1;right:-3%;top:8%;font-size:clamp(110px,23vw,340px);line-height:.78;letter-spacing:-.1em;font-weight:1000;transform:rotate(-13deg);color:rgba(255,204,64,.055);-webkit-text-stroke:3px rgba(255,204,64,.25);text-shadow:12px 12px 0 rgba(235,46,124,.12);pointer-events:none}
+.brand-hero:after{content:"";position:absolute;z-index:-1;inset:0;background:repeating-linear-gradient(120deg,transparent 0 72px,rgba(255,255,255,.025) 73px 75px),radial-gradient(circle at 85% 70%,rgba(35,213,202,.22) 0 2px,transparent 4px);background-size:auto,32px 32px;mask-image:linear-gradient(to left,#000,transparent 85%);pointer-events:none}
+.hero h1{font-weight:1000;letter-spacing:-.075em;text-transform:uppercase;max-width:900px;text-shadow:5px 7px 0 #271333}
+.hero h1 em{color:#ffcb42;text-shadow:5px 6px 0 #b32167}
+.eyebrow{color:#42e3d6;letter-spacing:.23em;font-weight:900}
+.hero .eyebrow{display:inline-block;width:fit-content;padding:7px 12px;background:#f52977;color:#fff;transform:rotate(-2deg);box-shadow:5px 5px 0 #ffcb42}
+.btn{background:#ffcb42;color:#171022;border:2px solid #ffcb42;border-radius:2px;text-transform:uppercase;letter-spacing:.05em;box-shadow:5px 5px 0 #ef337c;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 #42e3d6}
+.btn.secondary{border:2px solid #42e3d6;background:#1a1730;box-shadow:5px 5px 0 #42e3d6}
+.section h2{font-weight:950;letter-spacing:-.045em;text-transform:uppercase}
+.spotlight-panel,.book-feature,.card{border:2px solid #6d476c;border-radius:4px;box-shadow:8px 8px 0 #25192f;background:linear-gradient(145deg,#251b35,#110f1d)}
+.spotlight-panel:first-child{background:linear-gradient(125deg,rgba(12,10,23,.88),rgba(20,13,34,.88)),url("https://drive.google.com/thumbnail?id=19HZIeYq_bhq3xKK3ytc4HfMal4frHkmI&sz=w1200") center/cover no-repeat;border-color:#ffcb42}
+.spotlight-panel:first-child h3,.spotlight-panel:first-child p{color:#fff;text-shadow:0 2px 8px #000}
+.spotlight-panel:first-child .muted{background:rgba(0,0,0,.75);padding:8px}
+.symbol{color:#ffcb42;text-shadow:3px 3px 0 #e53180}
+.book-cover-type{background:linear-gradient(155deg,#f5327a,#311442 55%,#0e1826);border:3px solid #ffcb42;transform:rotate(3deg);box-shadow:12px 12px 0 #090811}
+.book-cover-type strong{font-weight:1000}
+.secondary-sections{border-top:3px dashed #ec3b80}.closing{border-top:3px dashed #42e3d6}
+.card:hover,.spotlight-panel:hover{border-color:#42e3d6}
+footer{border-top:3px solid #ffcb42}
+@media(max-width:780px){.brand-hero{min-height:590px}.brand-hero:before{top:24%;right:-7%;font-size:35vw}.hero h1{letter-spacing:-.055em}.spotlight-panel:first-child{background-position:center}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}}
