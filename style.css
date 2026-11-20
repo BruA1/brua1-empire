@@ -69,8 +69,8 @@ footer{border-top:3px solid #ffcb42}
 .growth-platform span{display:block;margin-top:6px;font-size:10px;letter-spacing:.12em;color:#f5e9e3}
 .growth-card h3{font-size:clamp(24px,2.8vw,35px);line-height:1.12;margin:26px 0 10px}
 .growth-card p{font-size:16px;line-height:1.6;color:#e8e8ec;margin:0 0 24px}
-.growth-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:auto;padding:12px 20px;border-radius:8px;background:#ffcb42;color:#141414!important;font-size:15px;font-weight:900;text-decoration:none;text-align:center}
-.growth-button:hover,.growth-button:focus-visible{background:#ffe28d;outline:2px solid #fff;outline-offset:3px}
+.growth-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:auto;padding:12px 20px;border-radius:8px;background:#f3f7ff;color:#0754c8!important;font-size:15px;font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-align:center}
+.growth-button:hover,.growth-button:focus-visible{background:#dbeaff;color:#003d9b!important;outline:2px solid #fff;outline-offset:3px}
 .growth-footnote{text-align:center;color:#cdd2d8;margin:22px 0 0;font-size:14px}
-.growth-footnote a{color:#ffcb42;text-decoration:underline}
+.growth-footnote a{color:#82bbff;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
 @media(max-width:700px){.growth-grid{grid-template-columns:1fr}.growth-hub{padding:32px 16px}.growth-card h3{margin-top:18px}}
