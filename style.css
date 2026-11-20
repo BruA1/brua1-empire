@@ -53,3 +53,24 @@ footer{border-top:3px solid #ffcb42}
 @media(max-width:780px){.music-art{height:240px}.book-cover-type.real-books{min-height:240px}.section-banner{min-height:140px}}
 
 .book-collection-art{display:flex;align-items:center;justify-content:center;gap:0;min-height:280px;padding:18px;background:#0a0a0e;border:3px solid #ffcb42;box-shadow:7px 7px 0 #0c0a12;overflow:hidden}.book-collection-art img{display:block;width:30%;height:240px;object-fit:contain;min-width:0;filter:drop-shadow(3px 5px 5px #0009)}.book-collection-art img:nth-child(2){width:40%;height:285px;z-index:1;filter:drop-shadow(5px 7px 6px #000b)}@media(max-width:780px){.book-collection-art{min-height:190px;padding:8px}.book-collection-art img{height:165px}.book-collection-art img:nth-child(2){height:190px}}
+
+
+/* Primary audience growth hub */
+.growth-hub{padding:clamp(32px,5vw,72px) clamp(18px,5vw,72px);background:linear-gradient(135deg,#15111d 0%,#0d1720 100%);color:#f7f3ec;border-top:2px solid #ffcb42;border-bottom:2px solid #ffcb42}
+.growth-heading{max-width:790px;margin:0 auto 30px;text-align:center}
+.growth-eyebrow{font-size:12px;font-weight:900;letter-spacing:.2em;color:#ffcb42}
+.growth-heading h2{font-size:clamp(28px,4.3vw,52px);line-height:1.1;margin:12px 0}
+.growth-heading p{font-size:clamp(15px,1.6vw,18px);line-height:1.6;color:#d5d7db}
+.growth-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1150px;margin:0 auto}
+.growth-card{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:clamp(22px,3vw,38px);border:2px solid #ffffff42;border-radius:16px;box-shadow:6px 6px 0 #0008}
+.growth-youtube{background:linear-gradient(145deg,#5e171f,#23151e 80%)}
+.growth-facebook{background:linear-gradient(145deg,#164b8c,#14273f 80%)}
+.growth-platform{font-size:20px;letter-spacing:.08em;font-weight:900}
+.growth-platform span{display:block;margin-top:6px;font-size:10px;letter-spacing:.12em;color:#f5e9e3}
+.growth-card h3{font-size:clamp(24px,2.8vw,35px);line-height:1.12;margin:26px 0 10px}
+.growth-card p{font-size:16px;line-height:1.6;color:#e8e8ec;margin:0 0 24px}
+.growth-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:auto;padding:12px 20px;border-radius:8px;background:#ffcb42;color:#141414!important;font-size:15px;font-weight:900;text-decoration:none;text-align:center}
+.growth-button:hover,.growth-button:focus-visible{background:#ffe28d;outline:2px solid #fff;outline-offset:3px}
+.growth-footnote{text-align:center;color:#cdd2d8;margin:22px 0 0;font-size:14px}
+.growth-footnote a{color:#ffcb42;text-decoration:underline}
+@media(max-width:700px){.growth-grid{grid-template-columns:1fr}.growth-hub{padding:32px 16px}.growth-card h3{margin-top:18px}}
