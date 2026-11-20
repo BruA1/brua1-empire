@@ -103,3 +103,37 @@ body{font-family:'Space Grotesk',Arial,sans-serif;letter-spacing:.005em}
 #music .spotlight-grid > .spotlight-panel:first-child::after {
   background-image: none !important;
 }
+
+/* 2026 BruA1 Empire: approved graffiti/retro studio direction */
+:root{--gold:#ffda31;--muted:#e3d9e9}
+body{background-color:#110b20;background-image:radial-gradient(circle at 7% 24%,#f52d7e22,transparent 33%),radial-gradient(circle at 93% 63%,#08f3e321,transparent 36%),repeating-linear-gradient(0deg,transparent 0 13px,#ffffff06 14px 15px)}
+.top{border-bottom:4px solid #ffdc36;box-shadow:0 6px 0 #f32b87}
+.top nav a{padding:7px 9px;transition:background .2s,color .2s}
+.top nav a:hover{background:#ffdc36;color:#150c20}
+.brand-hero{min-height:650px;border-bottom:7px solid #f3298a;background:linear-gradient(90deg,#10091bf0,#160c29de 66%,#120b20c7),radial-gradient(circle at 87% 16%,#ffdb37aa,transparent 33%),repeating-linear-gradient(25deg,#e62e7b22 0 12px,#1edfd61c 13px 22px,transparent 23px 55px)}
+.brand-hero::before{content:"BRUA1";right:-1%;top:12%;font-family:'Anton',Impact,sans-serif;color:#ffcf3715;-webkit-text-stroke:3px #fdcc3a52;transform:rotate(-11deg)}
+.brand-hero h1{font-family:'Permanent Marker',Impact,cursive;font-size:clamp(45px,6.5vw,96px);line-height:1.18;max-width:1050px;letter-spacing:-.025em;text-transform:uppercase;color:#fff9ec;text-shadow:4px 5px 0 #130a20,8px 9px 0 #ed2c85;filter:none}
+.brand-hero h1 em{font-family:'Permanent Marker',cursive;font-size:1em;color:#ffdc35;text-shadow:4px 5px 0 #100a1b,8px 9px 0 #ed2c85;-webkit-text-stroke:0}
+.brand-hero h1::before{content:""}
+.brand-hero p{max-width:680px;color:#fff9ee;font-weight:500}
+.brand-hero .eyebrow{background:#fa2d88;color:#fff;border:2px solid #fff7eb;box-shadow:5px 5px 0 #ffda35}
+.section>.eyebrow{display:inline-block;padding:5px 14px;background:#18dcd0;color:#100a20;transform:rotate(-1deg);font-family:'Anton',Impact,sans-serif;font-size:15px;letter-spacing:.09em}
+.section h2{font-family:'Permanent Marker',Impact,cursive;font-size:clamp(35px,4.5vw,64px);line-height:1.17;letter-spacing:-.025em;color:#fff8ed;text-shadow:4px 5px 0 #c82475}
+#music{max-width:none;padding-left:max(24px,calc((100vw - 1180px)/2));padding-right:max(24px,calc((100vw - 1180px)/2));border-bottom:5px solid #e82e82}
+#music>.intro{max-width:830px}
+#music .spotlight-grid{grid-template-columns:1.2fr 1fr}
+#music .spotlight-panel:first-child{border:3px solid #ffda35!important}
+#music .spotlight-panel h3{color:#ffda35}
+#music .music-art{border:4px solid #20e9dd}
+#books{border-bottom:5px solid #15dcd1}
+#books .book-feature{border:3px solid #ffda35;box-shadow:10px 10px 0 #e82e82}
+#books .book-collection-art{max-width:560px}
+#books .book-collection-art img{max-height:460px}
+.secondary-sections{border-top:0}
+.secondary-sections .card:first-child{border:3px solid #ed2f8b}
+.secondary-sections .card:last-child{border:3px solid #17dfd4}
+.closing{border-top:6px dashed #ffda35}
+.closing h2{max-width:1050px}
+.btn{background:#ffda35;border-color:#ffda35;color:#100b1a;font-family:'Anton',Impact,sans-serif;font-size:17px;letter-spacing:.035em;padding:13px 22px}
+.btn.secondary{background:#181126;color:#fff;border-color:#25e4d7}
+@media(max-width:780px){.brand-hero{min-height:560px}.brand-hero h1{font-size:clamp(39px,9vw,69px);line-height:1.22}.brand-hero h1 em{font-size:.94em}#music .spotlight-grid{grid-template-columns:1fr}#music{padding-left:24px;padding-right:24px}.section h2{font-size:clamp(34px,8vw,50px)}.top nav a{padding:6px}}
