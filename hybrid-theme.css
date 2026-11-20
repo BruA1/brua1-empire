@@ -1,0 +1,33 @@
+/* BruA1 Empire | Hybrid graffiti x retro recording studio */
+:root{--bg:#100b20;--panel:#1b1530;--panel2:#271b3b;--text:#fff8ed;--muted:#d5c9df;--gold:#ffd447;--line:#795083}
+html{scroll-padding-top:110px}
+body{background-color:#100b20;background-image:radial-gradient(ellipse at 9% 13%,#e92f8533,transparent 36%),radial-gradient(ellipse at 92% 38%,#14d6d033,transparent 35%),radial-gradient(ellipse at 20% 83%,#ff8b2530,transparent 35%),repeating-linear-gradient(0deg,transparent 0 5px,#ffffff08 6px 7px);background-attachment:fixed}
+.top{background:#100b20f0;border-bottom:3px solid #ffd447;box-shadow:0 6px 0 #e9347a66}
+.top nav a:focus-visible,.btn:focus-visible,.links a:focus-visible{outline:3px solid #35f4e4;outline-offset:4px}
+.brand-hero{min-height:690px;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(100deg,#120c24ef 0%,#120c24e8 49%,#120c2499 100%),radial-gradient(circle at 86% 22%,#ffb42eaa,transparent 35%),repeating-linear-gradient(130deg,#f73c8e20 0 8px,#12d9cf1c 9px 15px,#171027 16px 45px)}
+.brand-hero::before{content:"BRUA1";position:absolute;z-index:-1;right:-3%;top:16%;font-size:clamp(120px,23vw,360px);font-weight:1000;line-height:1;letter-spacing:-.12em;transform:rotate(-13deg);color:#f22e781f;-webkit-text-stroke:3px #ffd44775;text-shadow:14px 15px 0 #15e1d01e;pointer-events:none}
+.brand-hero::after{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 80% 70%,#ffd447 0 3px,transparent 4px),repeating-linear-gradient(45deg,transparent 0 80px,#35e9d51a 81px 84px);background-size:40px 40px,auto;mask-image:linear-gradient(90deg,transparent 25%,#000);pointer-events:none}
+.brand-hero h1{max-width:920px;font-weight:1000;text-shadow:5px 7px 0 #090713}
+.brand-hero p{color:#eee2f1;text-shadow:0 2px 8px #100b20}
+.hero .eyebrow{background:#e92d79;color:white;box-shadow:5px 5px 0 #ffd447}
+.section{position:relative}
+.section h2{color:#fff7e7;text-shadow:3px 3px 0 #9b285c}
+.section>.eyebrow{color:#43eee1}
+.spotlight,.secondary-sections{background-image:linear-gradient(115deg,#fe37800b,transparent 43%,#36e7d30a)}
+.spotlight-panel,.book-feature,.card{background:linear-gradient(145deg,#271a3aee,#151023f5);border:2px solid #86528b;box-shadow:8px 8px 0 #0b0817;border-radius:5px}
+.spotlight-panel:first-child{background:linear-gradient(105deg,#150f26e8,#180d29bd),url("https://drive.google.com/thumbnail?id=19HZIeYq_bhq3xKK3ytc4HfMal4frHkmI&sz=w1200") center/cover no-repeat;border-color:#ffd447}
+.spotlight-panel:first-child p,.spotlight-panel:first-child h3{color:#fff9ee;text-shadow:0 2px 7px #000}
+.music-art{border-color:#42e3d6}
+.book-feature{border-left:6px solid #ffd447}
+.book-collection-art{background:#100d1b;border-color:#ffd447}
+.card{overflow:hidden}
+.card img{border-radius:2px;max-width:100%}
+.card h3{color:#fff8ee}
+.links a{color:#ffd447;text-decoration:underline;text-underline-offset:4px}
+.btn{border-radius:3px;box-shadow:5px 5px 0 #e82e80}
+.btn.secondary{color:#fff9ee;border-color:#42e3d6;box-shadow:5px 5px 0 #2ad5c9}
+.btn:hover{transform:translate(-2px,-2px)}
+.closing{background:radial-gradient(ellipse at 90% 80%,#ffcf3820,transparent 45%);border-top:3px dashed #43e4d7}
+footer{background:#0c0817}
+@media(max-width:780px){.brand-hero{min-height:580px;background:linear-gradient(105deg,#120c24f5,#120c24d6),radial-gradient(circle at 90% 15%,#f73c8e99,transparent 50%)}.brand-hero::before{top:29%;right:-10%;font-size:37vw}.spotlight-panel,.book-feature,.card{box-shadow:5px 5px 0 #0b0817}.top{position:relative}.section{padding-top:65px;padding-bottom:65px}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}}
