@@ -87,3 +87,9 @@ body{font-family:'Space Grotesk',Arial,sans-serif;letter-spacing:.005em}
 .section.closing{position:relative;isolation:isolate;overflow:hidden}
 .section.closing::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#100b20f5,#100b20dc),url("https://drive.google.com/thumbnail?id=17XH5q4oiOYYURXqbMLn6v09rSCM9bDS9&sz=w1200") center/cover no-repeat;opacity:.6}
 @media(max-width:780px){#music::before,#books::before{background-size:auto 75%;background-position:right bottom;opacity:.55}}
+
+/* Balance the author showcase: reduce oversized book artwork while retaining legibility. */
+#books .book-feature{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px)}
+#books .book-collection-art{width:100%;max-width:480px;min-height:0;padding:10px;margin-inline:auto;box-sizing:border-box}
+#books .book-collection-art img{width:100%;height:auto;max-height:390px;object-fit:contain}
+@media(max-width:780px){#books .book-feature{grid-template-columns:minmax(0,1fr)}#books .book-collection-art{max-width:360px}#books .book-collection-art img{max-height:310px}}
