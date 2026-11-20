@@ -75,3 +75,15 @@ body{font-family:'Space Grotesk',Arial,sans-serif;letter-spacing:.005em}
 
 /* Keep the music call-to-action clean: artwork belongs in the separate artwork panel, not behind copy. */
 #music .spotlight-grid > .spotlight-panel:first-child{background:#1b1429;background-image:none;border-color:#ffd447}
+
+/* BruA1 cover-art atmosphere: artwork stays at the edges and behind dark, readable surfaces. */
+#music{position:relative;isolation:isolate;overflow:hidden}
+#music::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#100b20 0%,#100b20dd 30%,#100b20e8 72%,#100b20 100%),url("https://drive.google.com/thumbnail?id=1HJlylFA02tAABEcqbAL-Xng7XE0Yhu80&sz=w1200") right center/auto 100% no-repeat;opacity:.9}
+#music .spotlight-grid>.spotlight-panel:first-child{background:#1b1429;background-image:none}
+#books{position:relative;isolation:isolate;overflow:hidden}
+#books::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#100b20f5,#100b20e8 53%,#100b20d4),url("https://drive.google.com/thumbnail?id=1HWGPHaDfa-YEondw6vwUd31AnBg7QuLm&sz=w1200") right center/auto 100% no-repeat;opacity:.68}
+#affirmations{position:relative;isolation:isolate;background:#191328!important}
+#affirmations::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(120deg,#1b1429f2,#1b1429e8),url("https://drive.google.com/thumbnail?id=1zVSSbdENi41bkHeddVdGdc04g6PJjumk&sz=w800") center/cover;opacity:.42}
+.section.closing{position:relative;isolation:isolate;overflow:hidden}
+.section.closing::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#100b20f5,#100b20dc),url("https://drive.google.com/thumbnail?id=17XH5q4oiOYYURXqbMLn6v09rSCM9bDS9&sz=w1200") center/cover no-repeat;opacity:.6}
+@media(max-width:780px){#music::before,#books::before{background-size:auto 75%;background-position:right bottom;opacity:.55}}
