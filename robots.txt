@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brua1.github.io/brua1-empire/sitemap.xml
