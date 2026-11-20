@@ -93,3 +93,13 @@ body{font-family:'Space Grotesk',Arial,sans-serif;letter-spacing:.005em}
 #books .book-collection-art{width:100%;max-width:480px;min-height:0;padding:10px;margin-inline:auto;box-sizing:border-box}
 #books .book-collection-art img{width:100%;height:auto;max-height:390px;object-fit:contain}
 @media(max-width:780px){#books .book-feature{grid-template-columns:minmax(0,1fr)}#books .book-collection-art{max-width:360px}#books .book-collection-art img{max-height:310px}}
+
+/* Explicit fix: no book artwork or any image behind Listen. Learn. Create. */
+#music .spotlight-grid > .spotlight-panel:first-child {
+  background: linear-gradient(145deg, #251831 0%, #161121 100%) !important;
+  background-image: none !important;
+}
+#music .spotlight-grid > .spotlight-panel:first-child::before,
+#music .spotlight-grid > .spotlight-panel:first-child::after {
+  background-image: none !important;
+}
