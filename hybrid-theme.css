@@ -37,3 +37,18 @@ footer{background:#0c0817}
 #books .book-collection-art{width:100%;min-height:400px;padding:12px;display:flex;align-items:center;justify-content:center;overflow:visible}
 #books .book-collection-art img{display:block;width:100%;max-width:100%;min-width:0;height:auto;max-height:none;object-fit:contain;filter:drop-shadow(5px 9px 8px #0009)}
 @media(max-width:780px){#books .book-feature{grid-template-columns:minmax(0,1fr)}#books .book-collection-art{min-height:0;padding:8px}#books .book-collection-art img{width:100%;height:auto;max-height:none}}
+
+/* BruA1 type system: hip-hop poster headlines, graffiti accents, clean readable copy. */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+body{font-family:'Space Grotesk',Arial,sans-serif;letter-spacing:.005em}
+.logo,.hero h1,.section h2,.closing h2{font-family:'Anton',Impact,'Arial Narrow',sans-serif;font-weight:400;letter-spacing:.015em}
+.logo{font-size:clamp(27px,3vw,36px);line-height:1.05}
+.logo small{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.15em;line-height:1.5;margin-top:3px}
+.hero h1{font-size:clamp(62px,9vw,126px);line-height:.99;letter-spacing:.005em;text-transform:uppercase}
+.hero h1 em{font-family:'Permanent Marker',cursive;font-size:.77em;line-height:1.12;letter-spacing:-.035em;text-transform:none;display:inline-block;transform:rotate(-2deg);text-shadow:4px 5px 0 #151020}
+.section h2,.closing h2{font-size:clamp(36px,5.2vw,66px);line-height:1.04;letter-spacing:.012em;text-transform:uppercase}
+.section h3,.card h3,.book-feature h3,.spotlight-panel h3{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.025em;font-size:clamp(25px,2.5vw,34px)}
+.eyebrow{font-family:'Permanent Marker',cursive;font-size:clamp(12px,1.25vw,16px);letter-spacing:.045em;line-height:1.5}
+.top nav a,.btn,.links a{font-family:'Space Grotesk',Arial,sans-serif;font-weight:700}
+.intro,.card p,.book-feature p,.spotlight-panel p,.feature-list{font-family:'Space Grotesk',Arial,sans-serif;line-height:1.7}
+@media(max-width:780px){.hero h1{font-size:clamp(48px,11vw,82px)}.hero h1 em{font-size:.72em}.section h2{font-size:clamp(34px,8vw,54px)}}
