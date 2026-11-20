@@ -44,7 +44,7 @@ footer{border-top:3px solid #ffcb42}
 /* Brand asset placements */
 .music-art{height:260px;margin:-12px -12px 25px;border:3px solid #42e3d6;background:#171222 url("https://drive.google.com/thumbnail?id=1arTUyaTbtogvchmV63BevEuPaB9FPMXt&sz=w1200") center 38%/cover no-repeat;box-shadow:6px 6px 0 #ed347e}
 .music-art-panel{padding-top:26px}
-.book-cover-type.real-books{min-height:320px;transform:rotate(1deg);border:3px solid #ffcb42;background:#0a0a0e url("https://drive.google.com/thumbnail?id=19HZIeYq_bhq3xKK3ytc4HfMal4frHkmI&sz=w1200") center/contain no-repeat}
+.book-cover-type.real-books{min-height:320px;transform:rotate(1deg);border:3px solid #ffcb42;background:#0a0a0e url("https://drive.google.com/thumbnail?id=1gxchTT1HIeA9qK-NqiUTgesEHZiwZSAH&sz=w1200") center/contain no-repeat}
 .section-banner{min-height:155px;margin:-12px -12px 22px;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:4px;overflow:hidden;border:2px solid #ffcb42;box-shadow:5px 5px 0 #0c0a12;text-transform:uppercase}
 .section-banner span{font-size:12px;letter-spacing:.22em;font-weight:900}.section-banner strong{font-size:clamp(23px,3vw,37px);font-weight:1000;line-height:1.02;letter-spacing:-.04em}.section-banner small{font-size:10px;letter-spacing:.13em;font-weight:800}
 .affirmations-banner{background:radial-gradient(circle at 80% 10%,rgba(255,203,66,.34),transparent 35%),linear-gradient(130deg,#5c1b5d,#15142f 65%,#0d2530);color:#fff7dc}
