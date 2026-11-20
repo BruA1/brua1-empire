@@ -137,3 +137,36 @@ body{background-color:#110b20;background-image:radial-gradient(circle at 7% 24%,
 .btn{background:#ffda35;border-color:#ffda35;color:#100b1a;font-family:'Anton',Impact,sans-serif;font-size:17px;letter-spacing:.035em;padding:13px 22px}
 .btn.secondary{background:#181126;color:#fff;border-color:#25e4d7}
 @media(max-width:780px){.brand-hero{min-height:560px}.brand-hero h1{font-size:clamp(39px,9vw,69px);line-height:1.22}.brand-hero h1 em{font-size:.94em}#music .spotlight-grid{grid-template-columns:1fr}#music{padding-left:24px;padding-right:24px}.section h2{font-size:clamp(34px,8vw,50px)}.top nav a{padding:6px}}
+
+
+/* BruA1 Empire — amplified street-art treatment, inspired by the approved reference. */
+:root{--street-pink:#ff2795;--street-cyan:#0ff0e0;--street-yellow:#ffdc27}
+body{background-color:#0a0712;background-image:radial-gradient(circle at 0% 13%,#ff27953d,transparent 27%),radial-gradient(circle at 100% 42%,#00ffe52b,transparent 28%),radial-gradient(circle at 54% 95%,#ffc62c18,transparent 36%),repeating-linear-gradient(0deg,transparent 0 31px,#ffffff08 32px 33px),repeating-linear-gradient(90deg,transparent 0 95px,#ffffff05 96px 97px)}
+.top{border-bottom:5px solid var(--street-pink);background:linear-gradient(90deg,#07060df7,#1c0b27f7);box-shadow:0 7px 0 var(--street-yellow),0 14px 25px #0008}
+.top nav a{font-family:'Anton',Impact,sans-serif;font-size:clamp(14px,1.35vw,20px);letter-spacing:.05em;color:#fff8e8;text-shadow:2px 2px #000}
+.top nav a:hover{background:var(--street-yellow);color:#0b0712;transform:rotate(-2deg)}
+.brand-hero{min-height:680px;background:linear-gradient(92deg,#10091de8 0%,#12091bcf 58%,#12091ba3),radial-gradient(circle at 80% 18%,#ffdd38b0,transparent 30%),radial-gradient(circle at 7% 80%,#ff178c91,transparent 35%),repeating-linear-gradient(125deg,#fc168f22 0 10px,#05eadd22 11px 18px,transparent 19px 50px);border-bottom:10px solid var(--street-yellow)}
+.brand-hero::after{background:radial-gradient(circle at 78% 30%,#ffcf36 0 2px,transparent 4px),radial-gradient(circle at 90% 75%,#00ffe5 0 3px,transparent 5px),repeating-linear-gradient(15deg,transparent 0 54px,#ff319b35 55px 58px);background-size:31px 31px,47px 47px,auto;mask-image:linear-gradient(90deg,transparent 22%,#000)}
+.brand-hero h1{max-width:1060px;text-shadow:4px 5px 0 #000,8px 10px 0 #fa248c;filter:drop-shadow(0 0 18px #ff279522)}
+.brand-hero h1 em{color:var(--street-yellow);text-shadow:4px 5px #090514,8px 9px #ff168d}
+.section{scroll-margin-top:110px}
+.section h2{max-width:1050px;text-wrap:balance;text-shadow:4px 5px #090612,7px 8px #db287e}
+.section>.eyebrow{background:var(--street-yellow);color:#13091b;box-shadow:5px 5px 0 var(--street-pink);transform:rotate(-1.5deg)}
+#books>.eyebrow{background:var(--street-cyan);box-shadow:5px 5px var(--street-yellow)}
+.spotlight-panel,.book-feature,.secondary-sections .card{position:relative;border-radius:2px;box-shadow:9px 10px 0 #070510,12px 13px 0 #ff27956b}
+#music .spotlight-grid>.spotlight-panel:first-child{background:linear-gradient(145deg,#241330,#100b1d)!important}
+#music .spotlight-grid>.spotlight-panel:last-child{border:3px solid var(--street-cyan);background:linear-gradient(145deg,#25122f,#10111f)}
+#music .spotlight-grid>.spotlight-panel:last-child:after{content:"BRUA1 ORIGINALS";display:block;width:max-content;max-width:100%;font:400 16px 'Anton',Impact,sans-serif;letter-spacing:.12em;color:#0b0712;background:var(--street-yellow);padding:5px 12px;transform:rotate(-2deg)}
+#books .book-feature{background:linear-gradient(130deg,#23142d,#100c1d);border-color:var(--street-yellow)}
+#books .book-collection-art{background:radial-gradient(circle,#fa28872e,transparent 72%);border:0}
+#books .book-collection-art img{filter:drop-shadow(8px 13px 0 #000a)}
+.secondary-sections{position:relative}
+.secondary-sections .card:first-child{box-shadow:8px 9px 0 #ff27955e}
+.secondary-sections .card:last-child{box-shadow:8px 9px 0 #0ff0e055}
+.secondary-sections .card img{border:0!important;outline:3px solid var(--street-yellow);outline-offset:-3px}
+.secondary-sections .card:last-child img{outline-color:var(--street-cyan)}
+.btn{border-radius:2px;box-shadow:5px 6px 0 #f42191;font-size:clamp(16px,1.5vw,20px);transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:8px 9px 0 var(--street-cyan)}
+.closing{background:linear-gradient(110deg,#0d0818ef,#1a0b26e8),radial-gradient(circle at 90% 25%,#ff279580,transparent 40%);border-top:7px dashed var(--street-pink)}
+@media(max-width:780px){.top nav{gap:6px}.top nav a{font-size:14px;padding:5px 7px}.brand-hero{min-height:570px}.section{scroll-margin-top:24px}.section h2{text-shadow:3px 4px #a21a61}.spotlight-panel,.book-feature,.secondary-sections .card{box-shadow:5px 6px 0 #090510}}
+@media(prefers-reduced-motion:reduce){.top nav a,.btn{transition:none}}
