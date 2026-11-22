@@ -47,6 +47,7 @@ async function issueToken(env, order) {
   if (!product || product.price_cents !== 2999 || product.currency !== "USD" || product.license_type !== "basic") throw Error("Invalid product");
   if (!await env.INSTRUMENTAL_MASTERS.head(product.r2_object_key)) throw Error("MP3 not found in private R2");
   const token = [...crypto.getRandomValues(new Uint8Array(32))].map(x=>x.toString(16).padStart(2,"0")).join("");
+  await env.ORDERS_DB.prepare("DELETE FROM download_tokens WHERE order_id=?").bind(order.id).run();
   await env.ORDERS_DB.prepare("INSERT INTO download_tokens(token_hash,order_id,expires_at,download_count,max_downloads) VALUES(?,?,datetime('now','+60 minutes'),0,3)").bind(await sha256(token),order.id).run();
   return { downloadToken:token, expiresInMinutes:60, maxDownloads:3 };
 }
@@ -59,7 +60,7 @@ async function downloadMp3(env, token) {
   const object=await env.INSTRUMENTAL_MASTERS.get(row.r2_object_key);
   if (!object) return reply({error:"MP3 unavailable"},503);
   const result=await env.ORDERS_DB.prepare("UPDATE download_tokens SET download_count=download_count+1 WHERE token_hash=? AND expires_at>CURRENT_TIMESTAMP AND download_count<max_downloads AND EXISTS(SELECT 1 FROM orders WHERE id=download_tokens.order_id AND status='COMPLETED' AND paypal_capture_id IS NOT NULL)").bind(hash).run();
-  if (result.meta?.changes!==1) return reply({error:"Download limit reached"},403);
+  if (result.meta?.changes!==1) { await object.body?.cancel?.(); return reply({error:"Download limit reached"},403); }
   return new Response(object.body,{headers:{"Content-Type":"audio/mpeg","Content-Disposition":'attachment; filename="BruA1 - 108 in the Shade - Untagged.mp3"',"Cache-Control":"private, no-store","X-Content-Type-Options":"nosniff","Referrer-Policy":"no-referrer"}});
 }
 
@@ -83,7 +84,9 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere}
 <input id="key" type="password" placeholder="Private test key">
 <button id="create">Create Test Order</button>
 <button id="capture" hidden>Capture Approved Payment</button>
-<pre id="result"></pre>\n<input id="downloadToken" placeholder="Sandbox download token">\n<button id="download">Download Test MP3</button>
+<pre id="result"></pre>
+<input id="downloadToken" placeholder="Sandbox download token">
+<button id="download">Download Test MP3</button>
 <script>
 const result = document.getElementById("result");
 const key = document.getElementById("key");
@@ -120,7 +123,8 @@ document.getElementById("capture").onclick = async () => {
 const data = await send("/api/capture-order", { orderId });
 if (data) { result.textContent = JSON.stringify(data, null, 2); if(data.downloadToken) document.getElementById("downloadToken").value=data.downloadToken; }
 };
-document.getElementById("download").onclick=async()=>{ const token=document.getElementById("downloadToken").value; const r=await fetch("/api/download",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+key.value},body:JSON.stringify({token})}); if(!r.ok){const d=await r.json().catch(()=>({}));result.textContent=d.error||"Download failed";return;} const blob=await r.blob(); const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download="BruA1 - 108 in the Shade - Untagged.mp3";a.click();setTimeout(()=>URL.revokeObjectURL(u),10000);result.textContent="Sandbox MP3 downloaded (counts toward three-download limit).";};\n</script>
+document.getElementById("download").onclick=async()=>{ const token=document.getElementById("downloadToken").value; const r=await fetch("/api/download",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+key.value},body:JSON.stringify({token})}); if(!r.ok){const d=await r.json().catch(()=>({}));result.textContent=d.error||"Download failed";return;} const blob=await r.blob(); const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download="BruA1 - 108 in the Shade - Untagged.mp3";a.click();setTimeout(()=>URL.revokeObjectURL(u),10000);result.textContent="Sandbox MP3 downloaded (counts toward three-download limit).";};
+</script>
 </html>`;
 export default {
 async fetch(request, env) {
@@ -167,7 +171,8 @@ if (authorization !== "Bearer " + env.CHECKOUT_TEST_KEY) {
 return reply({ error: "Unauthorized" }, 401);
 }
 try {
-if (path === "/api/download") { const body=await request.json().catch(()=>({})); return downloadMp3(env,body.token); }\nif (path === "/api/create-order") {
+if (path === "/api/download") { const body=await request.json().catch(()=>({})); return downloadMp3(env,body.token); }
+if (path === "/api/create-order") {
 const product = await env.ORDERS_DB.prepare(
   "SELECT id, title, price_cents, currency, license_type FROM products WHERE id = ?"
   ).bind(PRODUCT_ID).first();
@@ -290,7 +295,7 @@ const product = await env.ORDERS_DB.prepare(
                                                                                                                                                     } catch (e) {
                                                                                                                                                     return reply({
                                                                                                                                                     error: "Sandbox operation failed",
-                                                                                                                                                    detail: e.message
+                                                                                                                                                    detail: "Check private sandbox logs"
                                                                                                                                                     }, 502);
                                                                                                                                                     }
                                                                                                                                                     }
