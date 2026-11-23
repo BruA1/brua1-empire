@@ -1,0 +1,17 @@
+# BruA1 checkout — PayPal Sandbox test Worker only. Not approved for live sales.
+name = "brua1-checkout-sandbox"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[vars]
+PAYPAL_ENVIRONMENT = "sandbox"
+
+[[d1_databases]]
+binding = "ORDERS_DB"
+database_name = "brua1-orders-sandbox"
+database_id = "7e9532d6-857d-4ecf-ac4b-6de92424fcc3"
+
+[[r2_buckets]]
+binding = "INSTRUMENTAL_MASTERS"
+bucket_name = "brua1-instrumentals-masters"
