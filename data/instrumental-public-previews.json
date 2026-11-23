@@ -1,0 +1,278 @@
+{
+  "status": "preview-staging-only",
+  "products": [
+    {
+      "id": "BRUA1-INS-0001",
+      "title": "108 in the Shade",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_108_in_the_Shade_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0002",
+      "title": "Anxiety",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0002.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0003",
+      "title": "Blaze",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0003.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0004",
+      "title": "Chopin",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0004.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0005",
+      "title": "Cypher",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0005.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0006",
+      "title": "Dallar and a Dream",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0006.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0007",
+      "title": "Danger",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0007.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0008",
+      "title": "decater",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0008.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0009",
+      "title": "Drawdown",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0009.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0010",
+      "title": "DreSlide",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0010.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0011",
+      "title": "DrPepperFlavoredListerineJ",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_DrPepperFlavoredListerineJ_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0012",
+      "title": "Elon Free",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0012.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0013",
+      "title": "Fck Stress",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0013.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0014",
+      "title": "Get Em",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0014.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0015",
+      "title": "Ginu",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0015.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0016",
+      "title": "Gnosis",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0016.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0017",
+      "title": "JRSHIT2",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_JRSHIT2_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0018",
+      "title": "Just2Inspire",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_Just2Inspire_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0019",
+      "title": "Laid Back & Litty",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0019.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0020",
+      "title": "Litty",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0020.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0021",
+      "title": "Loving You",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0021.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0022",
+      "title": "Mailvoi",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0022.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0023",
+      "title": "Messy",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0023.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0024",
+      "title": "Morf",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0024.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0025",
+      "title": "Nawlins",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0025.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0026",
+      "title": "paralyzed",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0026.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0027",
+      "title": "Phareal",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0027.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0028",
+      "title": "realfocus_2",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_realfocus_2_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0029",
+      "title": "Ride With Me",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0029.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0030",
+      "title": "Shake it like",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_shakeitlike_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0031",
+      "title": "Shop Open",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0031.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0032",
+      "title": "SpaceX",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0032.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0033",
+      "title": "Steel",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_steel_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0034",
+      "title": "Stranger",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0034.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0035",
+      "title": "Street Dreams",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_Street_Dreams_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0036",
+      "title": "The Flu",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_The_Flu_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0037",
+      "title": "Whoa Naa",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0037.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0038",
+      "title": "Worse",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/108%20in%20the%20Shade/BruA1_worse_TAGGED_PREVIEW.mp3",
+      "preview_type": "tagged",
+      "purchase_enabled": false
+    },
+    {
+      "id": "BRUA1-INS-0039",
+      "title": "Zayoo",
+      "preview_url": "https://pub-994c8c7a928c44ba9521493dbdeb80cf.r2.dev/store-previews/BRUA1-INS-0039.mp3",
+      "preview_type": "short-preview-pending",
+      "purchase_enabled": false
+    }
+  ]
+}
