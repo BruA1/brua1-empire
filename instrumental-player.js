@@ -20,9 +20,7 @@ function make(tag, className, text) {
 function updateSummary() {
   const unavailable = tracks.filter(item => item.state === "missing").length;
   summary.textContent = tracks.length + " original instrumentals · " +
-    (tracks.length - unavailable) + " preview links available" +
-    (unavailable ? " · " + unavailable + " unavailable" : "") +
-    " · Tap Play to listen";
+    (unavailable ? unavailable + " audio issues — tap Retry or refresh" : "Tap Play to listen");
 }
 
 function updateButtons() {
@@ -40,15 +38,19 @@ function updateButtons() {
       button.setAttribute("aria-label", (playing ? "Pause " : "Play ") + item.title + " preview");
       status.textContent = item.preview_type === "tagged" ? "Tagged preview ready" : "Short preview ready";
     } else {
-      button.disabled = true;
-      button.textContent = item.state === "checking" ? "Checking" : "Pending";
-      status.textContent = item.state === "checking" ? "Checking correct audio…" : "Preview not yet available";
+      button.disabled = item.state === "checking";
+      button.textContent = item.state === "checking" ? "Checking" : "Retry";
+      status.textContent = item.state === "checking" ? "Checking preview…" : "Audio failed to load — tap Retry";
     }
   }
   updateSummary();
 }
 
 function play(item) {
+  if (item.state === "missing") {
+    item.state = "ready";
+    currentId = null;
+  }
   if (item.state !== "ready") return;
   if (currentId === item.id) {
     if (player.paused) {
