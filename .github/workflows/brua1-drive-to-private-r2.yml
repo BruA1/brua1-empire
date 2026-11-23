@@ -1,0 +1,99 @@
+name: BruA1 Drive to Private R2 Masters
+
+# Staging workflow: manual only, no deletions, no Worker deployment.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Dry run first. Copy only after confirming the planned files.'
+        required: true
+        type: choice
+        options:
+          - dry-run
+          - copy
+        default: dry-run
+
+permissions:
+  contents: read
+
+concurrency:
+  group: brua1-drive-r2-private-masters
+  cancel-in-progress: false
+
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      # This service account is shared on ONLY the Drive masters folder.
+      RCLONE_CONFIG_DRIVE_TYPE: drive
+      RCLONE_CONFIG_DRIVE_SCOPE: drive.readonly
+      RCLONE_CONFIG_DRIVE_ROOT_FOLDER_ID: 1dTtYPYcSUuP5fu6DuGhL6z-_7pyQ5P2s
+      RCLONE_CONFIG_DRIVE_SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}
+      # R2 S3 credentials MUST be restricted to brua1-instrumentals-masters.
+      RCLONE_CONFIG_R2_TYPE: s3
+      RCLONE_CONFIG_R2_PROVIDER: Cloudflare
+      RCLONE_CONFIG_R2_ACCESS_KEY_ID: ${{ secrets.CLOUDFLARE_R2_ACCESS_KEY_ID }}
+      RCLONE_CONFIG_R2_SECRET_ACCESS_KEY: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
+      RCLONE_CONFIG_R2_ENDPOINT: https://dbdf1a4eb02967b8042ec7e1cb45fa51.r2.cloudflarestorage.com
+      RCLONE_CONFIG_R2_REGION: auto
+      RCLONE_CONFIG_R2_NO_CHECK_BUCKET: "true"
+    steps:
+      - name: Verify required credentials are configured
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$RCLONE_CONFIG_DRIVE_SERVICE_ACCOUNT_CREDENTIALS" || { echo "Missing GitHub secret: GDRIVE_SERVICE_ACCOUNT_JSON"; exit 1; }
+          test -n "$RCLONE_CONFIG_R2_ACCESS_KEY_ID" || { echo "Missing GitHub secret: CLOUDFLARE_R2_ACCESS_KEY_ID"; exit 1; }
+          test -n "$RCLONE_CONFIG_R2_SECRET_ACCESS_KEY" || { echo "Missing GitHub secret: CLOUDFLARE_R2_SECRET_ACCESS_KEY"; exit 1; }
+          echo "Credential fields are present (values hidden)."
+      - name: Install rclone
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq rclone
+          rclone version
+      - name: Confirm Google Drive folder can be read
+        shell: bash
+        run: |
+          set -euo pipefail
+          rclone lsf drive: --max-depth 1 --files-only | head -n 90 || true
+      - name: Dry-run or copy private masters without overwriting
+        shell: bash
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+          case "$MODE" in
+            dry-run) args=(--dry-run); echo "DRY RUN: nothing will be uploaded." ;;
+            copy) args=(); echo "COPY MODE: only missing files will be uploaded to the private R2 bucket." ;;
+            *) echo "Invalid mode"; exit 1 ;;
+          esac
+          # Only known clean-master naming patterns; excludes public preview files.
+          # Drive is read-only. R2 objects are never deleted or overwritten.
+          rclone copy drive: r2:brua1-instrumentals-masters \
+            --max-depth 1 \
+            --include 'BruA1 - *Untagged.mp3' \
+            --include 'BruA1 - *Utagged.mp3' \
+            --include 'BruA1 - *Untqgged.mp3' \
+            --include 'BruA1 - *Master.wav' \
+            --ignore-existing \
+            --transfers 4 --checkers 8 \
+            --retries 3 --low-level-retries 8 \
+            --max-transfer 3G \
+            --stats 30s --log-level INFO \
+            "${args[@]}"
+      - name: Verify files against R2 by object size
+        if: ${{ inputs.mode == 'copy' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # This checks sizes; audio listening and license QA remain separate.
+          rclone check drive: r2:brua1-instrumentals-masters \
+            --max-depth 1 --one-way --size-only \
+            --include 'BruA1 - *Untagged.mp3' \
+            --include 'BruA1 - *Utagged.mp3' \
+            --include 'BruA1 - *Untqgged.mp3' \
+            --include 'BruA1 - *Master.wav' \
+            --log-level INFO
