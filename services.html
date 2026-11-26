@@ -62,7 +62,7 @@
 <p>Included revisions apply to the agreed scope; extra work is quoted separately. Turnaround begins after the agreed payment and receipt of usable files. Stereo WAV and MP3 delivery is proposed as applicable; stems and project files are included only when specifically quoted. You must have the necessary rights to all materials you submit. Portfolio use requires your separate permission. The final quote will include delivery, cancellation, refund and file-retention terms for your review before payment. No order or payment is created by sending an inquiry.</p>
 <h2 id="quote">Request a quote</h2>
 <p>Complete the form to prepare an email. It opens your email app; review and send the message yourself. No information is sent or stored by this form automatically.</p>
-<form class="svc-form" id="quote-form">
+<form class="svc-form" id="quote-form" method="post" action="mailto:brua1@brua1.com">
 <div class="svc-fields">
 <div><label for="artist">Name or artist name *</label><input id="artist" name="artist" autocomplete="name" maxlength="100" required></div>
 <div><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="150" required></div>
@@ -76,7 +76,7 @@
 <div><label for="notes">Project details and desired sound</label><textarea id="notes" name="notes" maxlength="650" rows="4"></textarea></div>
 <label class="check"><input type="checkbox" name="rights" required><span>I have the necessary rights to the recordings and other materials I intend to submit.</span></label>
 <label class="check"><input type="checkbox" name="understood" required><span>I understand this is an inquiry, not an accepted order, and the final scope, terms and price must be agreed before payment.</span></label>
-<button class="btn" type="submit">Prepare quote email</button>
+<button class="btn" type="submit" disabled>Prepare quote email</button>
 <p id="quote-status" class="svc-small" role="status"></p>
 <noscript><p>JavaScript is unavailable. Email your project details directly using the address below.</p></noscript>
 <p class="svc-small">Prefer email? <a href="mailto:brua1@brua1.com?subject=BruA1%20Audio%20Services%20Quote">brua1@brua1.com</a>. Please do not include payment details or sensitive files. Your email provider handles the message after you send it.</p>
@@ -102,6 +102,7 @@ const url='mailto:brua1@brua1.com?subject='+encodeURIComponent('BruA1 Audio Serv
 status.textContent='Your email app should open. Review and send the message there. If it does not open, contact brua1@brua1.com directly.';
 window.location.href=url;
 });
+form.querySelector('button[type="submit"]').disabled=false;
 })();
 </script>
 </body>
