@@ -61,7 +61,7 @@
 <h2>Project terms</h2>
 <p>Included revisions apply to the agreed scope; extra work is quoted separately. Turnaround begins after the agreed payment and receipt of usable files. Stereo WAV and MP3 delivery is proposed as applicable; stems and project files are included only when specifically quoted. You must have the necessary rights to all materials you submit. Portfolio use requires your separate permission. The final quote will include delivery, cancellation, refund and file-retention terms for your review before payment. No order or payment is created by sending an inquiry.</p>
 <h2 id="quote">Request a quote</h2>
-<p>Complete the form to prepare an email. It opens your email app; review and send the message yourself. No information is sent or stored by this form automatically.</p>
+<p>Complete the form to prepare your quote request. Review it, then open your email app or copy the message into webmail. No information is sent or stored by this form automatically.</p>
 <form class="svc-form" id="quote-form" method="post" action="mailto:brua1@brua1.com">
 <div class="svc-fields">
 <div><label for="artist">Name or artist name *</label><input id="artist" name="artist" autocomplete="name" maxlength="100" required></div>
@@ -78,6 +78,7 @@
 <label class="check"><input type="checkbox" name="understood" required><span>I understand this is an inquiry, not an accepted order, and the final scope, terms and price must be agreed before payment.</span></label>
 <button class="btn" type="submit" disabled>Prepare quote email</button>
 <p id="quote-status" class="svc-small" role="status"></p>
+<div id="quote-preview" hidden><label for="quote-message">Your prepared message</label><textarea id="quote-message" rows="12" readonly></textarea><div class="actions"><a id="quote-email" class="btn" href="mailto:brua1@brua1.com">Open email app</a><button id="quote-copy" class="btn secondary" type="button">Copy message</button></div><p class="svc-small">Send to brua1@brua1.com with the subject “BruA1 Audio Services Quote”. A quote is not requested until you actually send your email.</p></div>
 <noscript><p>JavaScript is unavailable. Email your project details directly using the address below.</p></noscript>
 <p class="svc-small">Prefer email? <a href="mailto:brua1@brua1.com?subject=BruA1%20Audio%20Services%20Quote">brua1@brua1.com</a>. Please do not include payment details or sensitive files. Your email provider handles the message after you send it.</p>
 </form>
@@ -91,7 +92,18 @@
 const form=document.getElementById('quote-form');
 const select=document.getElementById('service');
 const status=document.getElementById('quote-status');
-document.querySelectorAll('[data-package]').forEach(function(a){a.addEventListener('click',function(){select.selectedIndex=Number(a.dataset.package)+1;});});
+const preview=document.getElementById('quote-preview');
+const message=document.getElementById('quote-message');
+const emailLink=document.getElementById('quote-email');
+const copyButton=document.getElementById('quote-copy');
+function invalidate(){preview.hidden=true;status.textContent='';message.value='';emailLink.href='mailto:brua1@brua1.com';}
+form.addEventListener('input',invalidate);
+form.addEventListener('change',invalidate);
+copyButton.addEventListener('click',async function(){
+try{await navigator.clipboard.writeText(message.value);status.textContent='Message copied. Paste it into your email and send it.';}
+catch(e){message.focus();message.select();status.textContent='Message selected. Use your device’s copy command, then paste into email.';}
+});
+document.querySelectorAll('[data-package]').forEach(function(a){a.addEventListener('click',function(){select.selectedIndex=Number(a.dataset.package)+1;invalidate();});});
 form.addEventListener('submit',function(event){
 event.preventDefault();
 if(!form.reportValidity())return;
@@ -99,8 +111,11 @@ const data=new FormData(form);
 const fields=[['Artist','artist'],['Email','email'],['Project','project'],['Service','service'],['Genre','genre'],['Stems','stems'],['Requested date','deadline'],['References','refs'],['Project details','notes']];
 const body=['Hello BruA1,','I would like to request an audio services quote.','',...fields.map(function(pair){return pair[0]+': '+String(data.get(pair[1])||'Not provided');}),'','Rights confirmed: yes. Quote-only process acknowledged: yes.'].join('\r\n');
 const url='mailto:brua1@brua1.com?subject='+encodeURIComponent('BruA1 Audio Services Quote')+'&body='+encodeURIComponent(body);
-status.textContent='Your email app should open. Review and send the message there. If it does not open, contact brua1@brua1.com directly.';
-window.location.href=url;
+message.value=body;
+emailLink.href=url;
+preview.hidden=false;
+status.textContent='Your message is ready. Review it and choose Open email app or Copy message. Nothing has been sent.';
+message.focus();
 });
 form.querySelector('button[type="submit"]').disabled=false;
 })();
